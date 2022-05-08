@@ -1,0 +1,58 @@
+<style>
+    .container {
+    
+    max-width: 600px;
+    max-height: 400px;
+    box-shadow: 1px 1px 2px 2px rgb(196, 195, 195);  
+    }
+    .descrip{
+      font-size: 25px;
+      font-weight: lighter;
+    }
+   .card-body {
+     margin-top: 20px;
+     display: flex;
+     justify-content: space-between;
+     align-items: flex-end;
+     border-top: solid 1px rgb(241, 180, 180);
+      
+   }
+   .btn{
+    width: 120px;
+    border: solid 1px rgb(241, 155, 155);
+    box-shadow: none;
+   }
+   
+   .row {
+     
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+   }
+   
+</style>
+<div class="container">
+    <h1 class="display-6">Abra sua conta no banco mais vigoroso do Brasiiiilll!!!</h1><br>
+    <h2 class="descrip">10 dias sem juros no limite da conta¹, cartão com anuidade zero e muito mais.</h2>
+  <div class="row g-2">
+    <div class="col-md-3">
+      <input  class="form-control" id="iCpf" [(ngModel)]="cpf"  placeholder="Digite seu CPF">
+    </div>
+    <div class="col-5">
+      <input type="text"  class="form-control" id="iNome" [(ngModel)]="nome" placeholder="Nome ">
+    </div>
+    <div class="col-3">
+    <div class="d-grid gap-2 d-md-flex ">
+        <button class="btn btn-outline-danger btn2" type="button" (click)="save()" >Confirmar</button>
+        
+      </div>
+      
+    </div>
+  </div>
+  <div class="card-body">
+    <h6>Já possui conta? </h6> 
+    <a routerLink="/movimentacoes" class="btn btn-outline-danger">Acessar</a>
+        
+  </div>
+</div>
+  
